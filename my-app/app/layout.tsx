@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en" className="h-full">
-         <body className={cn(GeistSans.variable, AnekTelugu, "font-sans h-full")}>
+         <body className={cn(GeistSans.variable, AnekTelugu, "font-sans h-full bg-backround text-foreground")}>
             {children}
          </body>
       </html>
