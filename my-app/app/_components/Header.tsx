@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Section } from "./Section";
 import { GithubIcon } from "./icons/Githubicon";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export const Header = () => {
