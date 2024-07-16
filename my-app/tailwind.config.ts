@@ -20,7 +20,7 @@ const config = {
       extend: {
          fontFamily: {
             sans: ["var(--font-geist-sans)"],
-            captio: ["var(--font-caption)"],
+            caption: ["var(--font-caption)"],
          },
          colors: {
             border: "hsl(var(--border))",

@@ -4,9 +4,9 @@ import MyFace from "./images/my-face.jpg";
 
 export const Hero = () => {
    return (
-      <Section className="glex max-lg:flexcol items-start">
+      <Section className="flex max-md:flex-col items-start">
          <div className="flex-[2]">
-            <h2>Guillaume Zimmer</h2>
+            <h2 className="font-caption text-2xl">Guillaume Zimmer</h2>
             <h3>Full Stack Developer</h3>
             <p>
                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe a
@@ -19,7 +19,7 @@ export const Hero = () => {
             <Image
                src={MyFace}
                alt="Guillaume's picture"
-               className="w-full h-auto"
+               className="w-full h-auto max-w-xs"
             />
          </div>
       </Section>
