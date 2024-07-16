@@ -1,6 +1,6 @@
 import { Section } from "./Section";
-import MyFace from "./images/my-face.jpg"
-
+import Image from "next/image";
+import MyFace from "./images/my-face.jpg";
 
 export const Hero = () => {
    return (
@@ -16,10 +16,10 @@ export const Hero = () => {
             </p>
          </div>
          <div className="flex-1">
-            <img
-               src="./images/my-face.jpg"
-               className="w-full h-auto"
+            <Image
+               src={MyFace}
                alt="Guillaume's picture"
+               className="w-full h-auto"
             />
          </div>
       </Section>
