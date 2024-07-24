@@ -1,18 +1,50 @@
+"use client"; // Ajoutez cette ligne au début du fichier
+
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import { Code, LucideIcon } from "lucide-react";
-
+import { Code, CodeXml, FileCode, Braces, FileJson } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+type RepositoryProps = {
+   name: string;
+   description: string;
+   html_url: string;
+   language: string;
+};
 
 export const Status = () => {
+   const [repositories, setRepositories] = useState<RepositoryProps[]>([]);
+
+   // Remplacez 'votre_nom_utilisateur' par votre nom d'utilisateur GitHub
+   useEffect(() => {
+      const fetchRepositories = async () => {
+         const response = await axios.get(
+            `https://api.github.com/users/guiback0/repos`
+         );
+         setRepositories(response.data);
+         // Afficher les données dans la console pour débuggage.
+      };
+
+      fetchRepositories();
+   }, []);
+
+   const sideProjects = repositories.map((repo) => ({
+      name: repo.name,
+      description: repo.description || "Aucune description.",
+      html_url: repo.html_url,
+      language: repo.language,
+   }));
+
    return (
       <Section className="flex max-md:flex-col items-start gap-4">
          <div className="flex-[3] w-full">
             <Card className=" w-full p-4 flex flex-col gap-2">
                <p className="text-lg text-muted-foreground">Side Project</p>
                <div className="flex flex-col gap-4">
-                  {SIDE_PROJECTS.map((project, index) => (
+                  {sideProjects.map((project, index) => (
                      <SideProject key={index} {...project} />
                   ))}
                </div>
@@ -36,44 +68,35 @@ export const Status = () => {
    );
 };
 
-const SIDE_PROJECTS: SideProjectProps[] = [
-   {
-      logo: Code,
-      title: "Kaza",
-      description: "Description",
-      url: "https://github.com/guiback0/kaza",
-   },
-   {
-      logo: Code,
-      title: "Sophie Bluel",
-      description: "Description",
-      url: "https://github.com/guiback0/sophie-bluel",
-   },
-   {
-      logo: Code,
-      title: "Mon Vieux Grimoir",
-      description: "Description",
-      url: "https://github.com/guiback0/mon-vieux-grimoir",
-   },
-];
+const SideProject = (props: RepositoryProps) => {
+   let IconComponent = Code;
 
-type SideProjectProps = {
-   logo: LucideIcon;
-   title: string;
-   description: string;
-   url: string;
-};
+   switch (props.language?.toLowerCase()) {
+      case "html":
+         IconComponent = CodeXml;
+         break;
+      case "javascript":
+         IconComponent = Braces;
+         break;
+      case "java":
+         IconComponent = FileCode;
+         break;
+      case "typescript":
+         IconComponent = FileJson;
+         break;
+      default:
+         IconComponent = Code;
+   }
 
-const SideProject = (props: SideProjectProps) => {
    return (
       <Link
-         href={props.url}
+         href={props.html_url}
          className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
          <span className="bg-accent text accent-foreground p-3 rounded-sm">
-            <props.logo />
+            <IconComponent />
          </span>
          <div>
-            <p className="text-lg font-semibold">{props.title}</p>
+            <p className="text-lg font-semibold">{props.name}</p>
             <p className="text-sm text-muted-foreground">{props.description}</p>
          </div>
       </Link>
