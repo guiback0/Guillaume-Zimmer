@@ -1,6 +1,6 @@
 import { Header } from "./_components/Header";
 import { Hero } from "./_components/Hero";
-import { displayLinkedInExperiences } from "./_components/Likedin";
+import { Skills } from "./_components/Skill";
 import { Spacing } from "./_components/Spacing";
 import { Status } from "./_components/Status";
 
@@ -13,6 +13,7 @@ export default function Home() {
          <Spacing size="md" />
          <Status />
          <Spacing size="md" />
+         <Skills />
       </main>
    );
 }

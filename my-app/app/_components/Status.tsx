@@ -2,18 +2,12 @@
 
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import {
-   Code,
-   CodeXml,
-   FileCode,
-   Braces,
-   FileJson,
-   ArrowUpRight,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { IconProject } from "@/components/Project/icon";
 
 type RepositoryProps = {
    name: string;
@@ -124,31 +118,12 @@ const Contact = (props: ContactProps) => {
 };
 
 const SideProject = (props: RepositoryProps) => {
-   let IconComponent = Code;
-
-   switch (props.language?.toLowerCase()) {
-      case "html":
-         IconComponent = CodeXml;
-         break;
-      case "javascript":
-         IconComponent = Braces;
-         break;
-      case "java":
-         IconComponent = FileCode;
-         break;
-      case "typescript":
-         IconComponent = FileJson;
-         break;
-      default:
-         IconComponent = Code;
-   }
-
    return (
       <Link
          href={props.html_url}
          className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
          <span className="bg-accent text accent-foreground p-3 rounded-sm">
-            <IconComponent />
+            <IconProject language={props.language} />
          </span>
          <div>
             <p className="text-lg font-semibold">{props.name}</p>
