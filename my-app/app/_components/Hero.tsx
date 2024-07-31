@@ -32,7 +32,16 @@ export const Hero = () => {
                      Full Stack Developer
                   </h3>
                   <p className="text-base">
-                     Lorem, ipsum dolor sit amet
+                     Diplômé d'un Bac +3 en Conception Mécanique Aidé par
+                     Ordinateur (LP CMAO) et d’un Bac +2 en Génie Mécanique et
+                     Productique (DUT GMP), ma carrière a débuté dans le domaine
+                     de la gestion de chantier et de construction métallique.
+                     Aujourd'hui, je suis passionné par ma reconversion en tant
+                     que développeur web, cherchant à exploiter ces compétences
+                     variées dans le monde de la technologie. Je suis
+                     enthousiaste à l'idée de partager mon portfolio et
+                     d'échanger avec vous sur cette nouvelle aventure
+                     professionnelle.
                      <Link href="https://github.com/guiback0">
                         <Code className="inline-flex items-center gap-1">
                            <GithubIcon
@@ -41,9 +50,6 @@ export const Hero = () => {
                            consectetur
                         </Code>
                      </Link>
-                     adipisicing elit. Saepe a sit unde. Neque nihil iusto nam
-                     quae autem perferendis, reprehenderit, molestiae modi rerum
-                     provident minus laudantium debitis dolorum iure aliquam!
                   </p>
                </div>
             </Card>

@@ -3,13 +3,14 @@ import { Section } from "./Section";
 
 export const Skills = () => {
    return (
-      <Section>
+      <Section className="flex flex-col items-start gap-4">
          <Badge variant={"outline"} className="">
             Skills
          </Badge>
          <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-            What I do
+            I'm working on ...
          </h2>
+         
       </Section>
    );
 };
