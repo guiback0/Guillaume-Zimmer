@@ -1,3 +1,4 @@
+import { CarouselPlugin} from "./_components/Carousel";
 import { Email } from "./_components/Contact";
 import { Header } from "./_components/Header";
 import { Hero } from "./_components/Hero";
@@ -15,8 +16,9 @@ export default function Home() {
          <Status />
          <Spacing size="md" />
          <Skills />
+         <CarouselPlugin />
          <Spacing size="md" />
-         <Email/>
+         <Email />
          <Spacing size="md" />
       </main>
    );
