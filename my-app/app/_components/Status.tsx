@@ -1,12 +1,13 @@
 "use client"; // Ajoutez cette ligne au début du fichier
 
+import { createContext, useContext, useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import axios from "axios";
-import { useState, useEffect } from "react";
 import { IconProject } from "@/components/Project/icon";
 
 type RepositoryProps = {
@@ -74,6 +75,7 @@ export const Status = () => {
                   image="https://media.licdn.com/dms/image/D4E03AQHhmSaiobyCHQ/profile-displayphoto-shrink_200_200/0/1718307856444?e=1727308800&v=beta&t=8vc2RbRF6367PswMgBdzfeBO4LvrTXhrfxpOUGzqlFs"
                   mediumImage="https://static.vecteezy.com/ti/vecteur-libre/p3/13948544-logo-gmail-sur-fond-blanc-transparent-gratuit-vectoriel.jpg"
                   description="description"
+                  onClick={() => setIsOpen(true)}
                />
             </Card>
          </div>
