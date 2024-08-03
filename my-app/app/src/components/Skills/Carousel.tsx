@@ -3,18 +3,18 @@
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../ui/card";
 import {
    Carousel,
    CarouselContent,
    CarouselItem,
    CarouselNext,
    CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Section } from "./Section";
-import { ReactIcon } from "./icons/ReactIcon";
+} from "../ui/carousel";
+import { Section } from "../Section";
+import { ReactIcon } from "../../icons/ReactIcon";
 
-export function CarouselPlugin() {
+export function SkillsCarousel() {
    const plugin = React.useRef(
       Autoplay({ delay: 2000, stopOnInteraction: false })
    );

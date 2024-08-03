@@ -1,10 +1,9 @@
-import { CarouselPlugin} from "./_components/Carousel";
-import { Email } from "./_components/Contact";
-import { Header } from "./_components/Header";
-import { Hero } from "./_components/Hero";
-import { Skills } from "./_components/Skills";
-import { Spacing } from "./_components/Spacing";
-import { Status } from "./_components/Status";
+import { Contact } from "./src/pages/Contact";
+import { Header } from "./src/pages/Header";
+import { Hero } from "./src/pages/Hero";
+import { Skills } from "./src/pages/Skills";
+import { Spacing } from "./src/components/Spacing";
+import { Status } from "./src/pages/Status";
 
 export default function Home() {
    return (
@@ -16,9 +15,8 @@ export default function Home() {
          <Status />
          <Spacing size="md" />
          <Skills />
-         <CarouselPlugin />
          <Spacing size="md" />
-         <Email />
+         <Contact />
          <Spacing size="md" />
       </main>
    );

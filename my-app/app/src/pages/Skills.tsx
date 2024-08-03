@@ -1,5 +1,6 @@
-import { Badge } from "@/components/ui/badge";
-import { Section } from "./Section";
+import { Badge } from "../components/ui/badge";
+import { Section } from "../components/Section";
+import { SkillsCarousel } from "../components/Skills/Carousel";
 
 export const Skills = () => {
    return (
@@ -10,7 +11,7 @@ export const Skills = () => {
          <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
             I'm working on ...
          </h2>
-         
+         <SkillsCarousel />
       </Section>
    );
 };

@@ -1,10 +1,14 @@
-import { Code, CodeXml, FileCode, Braces, FileJson, LucideIcon } from "lucide-react";
+import {
+   Code,
+   CodeXml,
+   FileCode,
+   Braces,
+   FileJson,
+   LucideIcon,
+} from "lucide-react";
+import { IconProjectProps } from "../../../types/Project";
 
-type IconProjectProps = {
-   language: string;
-};
-
-const LANGUAGE_ICON_MAP: Record<string,LucideIcon> = {
+const LANGUAGE_ICON_MAP: Record<string, LucideIcon> = {
    html: CodeXml,
    javascript: Braces,
    java: FileCode,

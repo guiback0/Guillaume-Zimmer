@@ -1,9 +1,9 @@
-import { buttonVariants } from "@/components/ui/button";
-import { Section } from "./Section";
-import { GithubIcon } from "./icons/GithubIcon";
+import { buttonVariants } from "../components/ui/button";
+import { Section } from "../components/Section";
+import { GithubIcon } from "../icons/GithubIcon";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { LinkedinIcon } from "./icons/LinkedinIcon";
+import { LinkedinIcon } from "../icons/LinkedinIcon";
 
 export const Header = () => {
    return (

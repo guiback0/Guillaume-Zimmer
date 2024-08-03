@@ -3,8 +3,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import { Textarea } from "../ui/textarea";
+import { Button } from "../ui/button";
 import {
    Form,
    FormControl,
@@ -13,9 +13,9 @@ import {
    FormItem,
    FormLabel,
    FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "../ui/form";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
 
 const formSchema = z.object({
    username: z.string().min(2, {
@@ -28,7 +28,7 @@ const onSubmit = (data) => {
    // Handle form submission, e.g., send data to the server
 };
 
-export function ProfileForm() {
+export function ContactForm() {
    // ...
    const form = useForm();
    return (
