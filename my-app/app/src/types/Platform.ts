@@ -3,4 +3,6 @@ export type SocialsProps = {
    name: string;
    mediumImage: string;
    description: string;
+   wrapperType: 'link' | 'drawer';
+   href?: string; // Ajoutez cette prop si vous utilisez <Link>
 };

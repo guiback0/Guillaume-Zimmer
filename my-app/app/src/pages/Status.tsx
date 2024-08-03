@@ -11,6 +11,9 @@ import { Socials } from "../components/Status/Socials";
 
 import axios from "axios";
 
+
+
+
 export const Status = () => {
    const [repositories, setRepositories] = useState<RepositoryProps[]>([]);
 
@@ -63,13 +66,20 @@ export const Status = () => {
                   image="https://media.licdn.com/dms/image/D4E03AQHhmSaiobyCHQ/profile-displayphoto-shrink_200_200/0/1718307856444?e=1727308800&v=beta&t=8vc2RbRF6367PswMgBdzfeBO4LvrTXhrfxpOUGzqlFs"
                   mediumImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgV3rvl_AvDgG9o7p9b_b1sb1ZVChFrvuNQ&s"
                   description="160 relations"
+                   wrapperType="link"
+                  href="https://www.linkedin.com/in/guillaume-zimmer"
+                 
                />
-               <Socials
-                  name="Mail"
-                  image="https://media.licdn.com/dms/image/D4E03AQHhmSaiobyCHQ/profile-displayphoto-shrink_200_200/0/1718307856444?e=1727308800&v=beta&t=8vc2RbRF6367PswMgBdzfeBO4LvrTXhrfxpOUGzqlFs"
-                  mediumImage="https://static.vecteezy.com/ti/vecteur-libre/p3/13948544-logo-gmail-sur-fond-blanc-transparent-gratuit-vectoriel.jpg"
-                  description="description"
-               />
+              
+                  <Socials
+                     name="Mail"
+                     image="https://media.licdn.com/dms/image/D4E03AQHhmSaiobyCHQ/profile-displayphoto-shrink_200_200/0/1718307856444?e=1727308800&v=beta&t=8vc2RbRF6367PswMgBdzfeBO4LvrTXhrfxpOUGzqlFs"
+                     mediumImage="https://static.vecteezy.com/ti/vecteur-libre/p3/13948544-logo-gmail-sur-fond-blanc-transparent-gratuit-vectoriel.jpg"
+                     description="description"
+                     wrapperType="drawer"
+                   
+                  />
+               
             </Card>
          </div>
       </Section>

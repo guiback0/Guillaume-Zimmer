@@ -6,6 +6,7 @@ import { GithubIcon } from "../icons/GithubIcon";
 import Link from "next/link";
 import { Card } from "../components/ui/card";
 import { Button } from "../components/ui/button";
+import { OpenDrawerButton } from "../components/Contact/OpenDrawer";
 
 export const Hero = () => {
    return (
@@ -48,7 +49,9 @@ export const Hero = () => {
                alt="Guillaume's picture"
                className="w-full h-auto max-w-xs rounded-xl object-cover"
             />
-            <Button className=" w-full">Contactez-moi</Button>
+            <OpenDrawerButton>
+               <Button className=" w-full">Contactez-moi</Button>
+            </OpenDrawerButton>
          </div>
       </Section>
    );

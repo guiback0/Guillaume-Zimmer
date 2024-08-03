@@ -1,9 +1,16 @@
 import { Card } from "../ui/card";
 import { ArrowUpRight } from "lucide-react";
 import { SocialsProps } from "../../types/Platform";
+import Link from "next/link";
+import { OpenDrawerButton } from "../../components/Contact/OpenDrawer";
 
 export const Socials = (props: SocialsProps) => {
+   const { wrapperType, ...rest } = props;
+
+   const Wrapper = wrapperType === 'link' ? Link : OpenDrawerButton;
+
    return (
+      <Wrapper href={wrapperType === 'link' ? rest.href : undefined}>
       <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
          <div className="relative">
             <img
@@ -28,5 +35,6 @@ export const Socials = (props: SocialsProps) => {
             size={16}
          />
       </Card>
+      </Wrapper>
    );
 };

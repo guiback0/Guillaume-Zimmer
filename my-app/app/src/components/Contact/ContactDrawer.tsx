@@ -1,6 +1,10 @@
 "use client";
 
-import { useState } from "react";
+/**
+ * exemple pour utilisation
+ */
+
+import { useState, PropsWithChildren } from "react";
 import { Button } from "../ui/button";
 import {
    Drawer,
@@ -10,19 +14,17 @@ import {
    DrawerFooter,
    DrawerHeader,
    DrawerTitle,
+   DrawerTrigger,
 } from "../ui/drawer";
 
 import { ContactForm } from "../Contact/ContactForm";
 
-export const ContactDrawer = () => {
-   const [isOpen, setIsOpen] = useState(false);
-
+export const ContactDrawer = (props: PropsWithChildren<{}>) => {
    return (
-      <div>
-         <Button variant="outline" onClick={() => setIsOpen(true)}>
-            Open
-         </Button>
-         <Drawer open={isOpen} onOpenChange={setIsOpen}>
+         <Drawer>
+            <DrawerTrigger asChild>
+               {props.children}
+            </DrawerTrigger>
             <DrawerContent className="p-6">
                <DrawerHeader>
                   <DrawerTitle>Are you absolutely sure?</DrawerTitle>
@@ -38,6 +40,5 @@ export const ContactDrawer = () => {
                </DrawerFooter>
             </DrawerContent>
          </Drawer>
-      </div>
    );
 };
