@@ -10,6 +10,7 @@ import { SideProject } from "../components/Status/SideProject";
 import { RepositoryProps } from "@/app/src/types/Repository";
 import { Socials } from "../components/Status/Socials";
 import { transformRepositories } from "../utils/transformRepositories";
+import { Component } from "../components/LanguagePieChart";
 
 import axios from "axios";
 
@@ -53,12 +54,14 @@ export const Status = () => {
                   ))}
                </div>
             </Card>
-            <Card className="p-4 flex-1 flex flex-col gap-2">
+            <Card className="p-4 flex-[2] flex flex-col gap-2">
                <p className="text-lg text-muted-foreground">Contact me</p>
                {socials.map((social, index) => (
                   <Socials key={index} {...social} />
                ))}
             </Card>
+
+            <Component />
          </div>
       </Section>
    );
