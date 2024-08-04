@@ -8,11 +8,11 @@ import React from "react";
 import { ContactDrawer } from "./ContactDrawer";
 import { Button } from "../ui/button";
 
-export function OpenDrawerButton({children}) {
+export function OpenDrawerButton({ children }) {
    return (
       <div>
          <ContactDrawer>
-         <div>{children}</div>
+            <div className="cursor-pointer">{children}</div>
          </ContactDrawer>
       </div>
    );
