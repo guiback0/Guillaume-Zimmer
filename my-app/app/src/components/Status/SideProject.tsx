@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { IconProject } from "./Project/icon";
 import { RepositoryProps } from "../../types//Repository";
+import { useEffect, useState } from "react";
 
 export const SideProject = (props: RepositoryProps) => {
+   
+
    return (
       <Link
          href={props.html_url}
