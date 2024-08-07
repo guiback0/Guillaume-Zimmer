@@ -13,6 +13,16 @@ import {
 } from "../ui/carousel";
 import { Section } from "../Section";
 import { ReactIcon } from "../../icons/ReactIcon";
+import { CSSIcon } from "../../icons/CSSIcon";
+import { HTMLIcon } from "../../icons/HTMLIcon";
+import { JavaIcon } from "../../icons/JavaIcon";
+import { JavascriptIcon } from "../../icons/Javascript";
+import { SassIcon } from "../../icons/SassIcon";
+import { TailwindIcon } from "../../icons/TailwindIcon";
+import { TypescriptIcon } from "../../icons/Typescript";
+import { MongoDBIcon } from "../../icons/MongoDBIcon";
+import { NodeIcon } from "../../icons/NodeIcon";
+
 
 export function SkillsCarousel() {
    const plugin = React.useRef(
@@ -36,7 +46,7 @@ export function SkillsCarousel() {
                            <CardContent className="flex aspect-square items-center justify-center p-6">
                               <div>
                                  <div className="flex flex-col gap-4">
-                                    <ReactIcon
+                                    <NodeIcon
                                        size={42}
                                        className="animate-spin m-auto"
                                        style={{ animationDuration: "10s" }}
