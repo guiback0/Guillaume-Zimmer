@@ -20,14 +20,14 @@ import {
    ChartTooltip,
    ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-   { language: "html", bytes: 275, fill: "var(--color-html)" },
-   { language: "css", bytes: 200, fill: "var(--color-css)" },
-   { language: "scss", bytes: 200, fill: "var(--color-scss)" },
-   { language: "javascript", bytes: 173, fill: "var(--color-javascript)" },
-   { language: "typescript", bytes: 287, fill: "var(--color-typescript)" },
-   { language: "java", bytes: 120, fill: "var(--color-java)" },
-];
+
+export const updatedChartData = (allLanguages) => {
+   return Object.keys(allLanguages).map(language => ({
+      language: language.toLowerCase(), // Convertir les noms de langages en minuscules pour correspondre aux noms de variables CSS
+      bytes: allLanguages[language],
+      fill: `var(--color-${language.toLowerCase()})` // Assurez-vous que les variables CSS correspondent aux noms de langages en minuscules
+   }));
+};
 
 const chartConfig = {
    bytes: {
@@ -59,10 +59,10 @@ const chartConfig = {
    },
 } satisfies ChartConfig;
 
-export function Component() {
+export function Component({ chartData = [] }) {
    const totalbytes = React.useMemo(() => {
       return chartData.reduce((acc, curr) => acc + curr.bytes, 0);
-   }, []);
+   }, [chartData]);
 
    return (
       <Card className="flex flex-col flex-1 ">
