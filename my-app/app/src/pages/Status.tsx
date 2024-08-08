@@ -10,9 +10,10 @@ import { SideProject } from "../components/Status/SideProject";
 import { RepositoryProps } from "@/app/src/types/Repository";
 import { Socials } from "../components/Status/Socials";
 import { transformRepositories } from "../utils/transformRepositories";
-import { Component } from "../components/LanguagePieChart";
+
 
 import axios from "axios";
+import { Language } from "../components/Language";
 
 export const Status = () => {
    const [loading, setLoading] = useState(true);
@@ -84,7 +85,13 @@ export const Status = () => {
                   ))}
                </Card>
 
-               <Component />
+               <div>
+                  {loading ? (
+                     <p>Loading...</p>
+                  ) : (
+                     <Component chartData={chartData} />
+                  )}
+               </div>
             </div>
          </Section>
       );
@@ -119,7 +126,7 @@ export const Status = () => {
                ))}
             </Card>
 
-            <Component />
+            <Language />
          </div>
       </Section>
    );
