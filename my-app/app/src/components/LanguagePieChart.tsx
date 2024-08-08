@@ -22,10 +22,10 @@ import {
 } from "@/components/ui/chart";
 
 export const updatedChartData = (allLanguages) => {
-   return Object.keys(allLanguages).map(language => ({
+   return Object.keys(allLanguages).map((language) => ({
       language: language.toLowerCase(), // Convertir les noms de langages en minuscules pour correspondre aux noms de variables CSS
       bytes: allLanguages[language],
-      fill: `var(--color-${language.toLowerCase()})` // Assurez-vous que les variables CSS correspondent aux noms de langages en minuscules
+      fill: `var(--color-${language.toLowerCase()})`, // Assurez-vous que les variables CSS correspondent aux noms de langages en minuscules
    }));
 };
 
@@ -95,13 +95,13 @@ export function Component({ chartData = [] }) {
                                     <tspan
                                        x={viewBox.cx}
                                        y={viewBox.cy}
-                                       className="fill-foreground text-3xl font-bold">
+                                       className="text-xl fill-foreground text-3xl font-bold">
                                        {totalbytes.toLocaleString()}
                                     </tspan>
                                     <tspan
                                        x={viewBox.cx}
                                        y={(viewBox.cy || 0) + 24}
-                                       className="fill-muted-foreground">
+                                       className=" fill-muted-foreground">
                                        bytes
                                     </tspan>
                                  </text>
