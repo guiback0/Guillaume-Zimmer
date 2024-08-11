@@ -56,10 +56,7 @@ export function SkillsCarousel() {
                                        React
                                     </h3>
                                     <p className="text-sm text-muted-foreground">
-                                       Plan it, create it, launch it.
-                                       Collaborate seamlessly with all the
-                                       organization and hit your marketing goals
-                                       every month with our marketing plan.
+                                    Pour des interfaces dynamiques et réactives.
                                     </p>
                                  </div>
                               </div>
