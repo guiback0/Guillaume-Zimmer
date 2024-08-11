@@ -9,8 +9,9 @@ import { Language } from "./src/components/Language";
 export default function Home() {
    return (
       <main>
-         <Header />
          <Spacing size="sm" />
+       {/*   <Header />
+         <Spacing size="sm" /> */}
          <Hero />
          <Spacing size="sm" />
          <Status />

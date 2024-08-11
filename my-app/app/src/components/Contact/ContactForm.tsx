@@ -18,7 +18,7 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 
 const formSchema = z.object({
-   username: z.string().min(2, {
+   email: z.string().min(2, {
       message: "Username must be at least 2 characters.",
    }),
 });
@@ -33,37 +33,34 @@ export function ContactForm() {
    const form = useForm();
    return (
       <Form {...form}>
-         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 m-4">
             <FormField
                control={form.control}
-               name="username"
+               name="email"
                render={({ field }) => (
                   <FormItem>
-                     <FormLabel>Email</FormLabel>
+                     <FormLabel>Votre e-mail</FormLabel>
                      <FormControl>
-                        <Input placeholder="Email" {...field} />
+                        <Input placeholder="E-mail" {...field} />
                      </FormControl>
-                     <FormLabel>Nom Complet</FormLabel>
-                     <FormControl>
-                        <Input placeholder="Email" {...field} />
-                     </FormControl>
+
                      <FormDescription>
                         <div className="grid w-full gap-1.5">
-                           <Label htmlFor="message-2">Your Message</Label>
+                           <Label htmlFor="message-2">Votre message</Label>
                            <Textarea
-                              placeholder="Type your message here."
+                              placeholder="Écrivez votre message ici"
                               id="message-2"
                            />
-                           <p className="text-sm text-muted-foreground">
-                              Your message will be copied to the support team.
-                           </p>
+
                         </div>
                      </FormDescription>
                      <FormMessage />
                   </FormItem>
                )}
             />
-            <Button type="submit">Submit</Button>
+            <div className="flex justify-center">
+         <Button type="submit">Submit</Button>
+      </div>
          </form>
       </Form>
    );
