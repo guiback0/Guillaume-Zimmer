@@ -112,7 +112,7 @@ export const Status = () => {
 
          <div className="flex-[2] flex flex-col gap-4">
             <Card className="p-4 flex-1">
-               <p className="text-lg text-muted-foreground">Work</p>
+               <p className="text-lg text-muted-foreground">Expériences</p>
                <div className="flex flex-col gap-4">
                   {works.map((work, index) => (
                      <Work key={index} {...work} />
@@ -120,7 +120,7 @@ export const Status = () => {
                </div>
             </Card>
             <Card className="p-4 flex-[2] flex flex-col gap-2">
-               <p className="text-lg text-muted-foreground">Contact me</p>
+               <p className="text-lg text-muted-foreground">Contactez-moi</p>
                {socials.map((social, index) => (
                   <Socials key={index} {...social} />
                ))}

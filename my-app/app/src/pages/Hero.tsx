@@ -12,7 +12,7 @@ export const Hero = () => {
    return (
       <Section className="flex max-md:flex-col items-start gap-4">
          <div className="flex-[3] w-full">
-            <Card className=" w-full p-4 flex flex-col gap-2">
+            <div className=" w-full p-4 flex flex-col gap-2">
                <div className="flex-[3] w-full flex flex-col fap-2">
                   <h2 className="font-caption font-bold text-5xl text-primary">
                      Guillaume Zimmer
@@ -40,7 +40,7 @@ export const Hero = () => {
                      aventure professionnelle.
                   </p>
                </div>
-            </Card>
+            </div>
          </div>
 
          <div className="flex flex-col flex-[2] gap-4">
