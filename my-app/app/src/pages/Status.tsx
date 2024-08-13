@@ -7,35 +7,24 @@ import { createContext, useContext, useState, useEffect } from "react";
 import { Card } from "../components/ui/card";
 import { Section } from "../components/Section";
 import { SideProject } from "../components/Status/SideProject";
-import { RepositoryProps } from "@/app/src/types/Repository";
+import { RepositoryProps } from "@/app/src/domain/types/repository";
 import { Socials } from "../components/Status/Socials";
 import { transformRepositories } from "../utils/transformRepositories";
-
-
-import axios from "axios";
 import { Language } from "../components/Language";
+import { fetchRepositories } from "../domain/usecases/repositories";
 
 export const Status = () => {
    const [loading, setLoading] = useState(true);
-
    const [repositories, setRepositories] = useState<RepositoryProps[]>([]);
 
-   // Remplacez 'votre_nom_utilisateur' par votre nom d'utilisateur GitHub
    useEffect(() => {
-      const fetchRepositories = async () => {
-         try {
-            const response = await axios.get(
-               `https://api.github.com/users/guiback0/repos`
-            );
-            setRepositories(response.data);
-            setLoading(false); // Déplacez setLoading(false) ici
-         } catch (error) {
-            console.error("Error fetching repositories:", error);
-            setLoading(false); // Assurez-vous de gérer les erreurs et de mettre à jour l'état de chargement
-         }
+      const loadRepositories = async () => {
+         const data = await fetchRepositories("guiback0");
+         setRepositories(data);
+         setLoading(false);
       };
 
-      fetchRepositories();
+      loadRepositories();
    }, []);
 
    const sideProjects = transformRepositories(repositories);

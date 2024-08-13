@@ -10,7 +10,7 @@ export default function Home() {
    return (
       <main>
          <Spacing size="sm" />
-       {/*   <Header />
+         {/*   <Header />
          <Spacing size="sm" /> */}
          <Hero />
          <Spacing size="sm" />

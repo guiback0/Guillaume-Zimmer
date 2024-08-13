@@ -1,9 +1,5 @@
 "use client";
 
-/**
- * exemple pour utilisation
- */
-
 import { useState, PropsWithChildren } from "react";
 import { Button } from "../ui/button";
 import {

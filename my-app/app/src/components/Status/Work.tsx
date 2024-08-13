@@ -1,8 +1,6 @@
 import { Badge } from "../ui/badge";
 import Link from "next/link";
-import { WorkProps } from "../../types/Experience";
-
-
+import { WorkProps } from "../../domain/types/experience";
 
 export const Work = (props: WorkProps) => {
    return (

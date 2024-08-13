@@ -1,8 +1,8 @@
 import { Section } from "../components/Section";
 import Image from "next/image";
-import MyFace from "../images/my-face.jpg";
+import MyFace from "@/public/images/my-face.jpg";
 import { Code } from "../components/Code";
-import { GithubIcon } from "../icons/GithubIcon";
+import { GithubIcon } from "../../../public/icons/GithubIcon";
 import Link from "next/link";
 import { Card } from "../components/ui/card";
 import { Button } from "../components/ui/button";

@@ -1,0 +1,50 @@
+
+[
+    {
+      "title": "HTML 5",
+      "description": "Pour des structures web solides",
+      "icon": "HTMLIcon"
+    },
+    {
+      "title": "CSS 3",
+      "description": "Pour des styles web élégants",
+      "icon": "CSSIcon"
+    },
+    {
+      "title": "JavaScript",
+      "description": "Pour des interactions web dynamiques",
+      "icon": "JavascriptIcon"
+    },
+    {
+      "title": "TypeScript",
+      "description": "Je sécurise et optimise avec TypeScript",
+      "icon": "TypescriptIcon"
+    },
+    {
+      "title": "React",
+      "description": "Pour des interfaces dynamiques et réactives",
+      "icon": "ReactIcon"
+    },
+    {
+      "title": "Sass",
+      "description": "Je perfectionne les styles avec Sass",
+      "icon": "SassIcon"
+    },
+    {
+      "title": "Tailwind",
+      "description": "Pour des design plus simples et accessibles",
+      "icon": "TailwindIcon"
+    },
+    {
+      "title": "Mongo DB",
+      "description": "Pour la gestion de données",
+      "icon": "MongoDBIcon"
+    },
+    {
+        "title": "Java",
+        "description": "Je développe des applications robustes avec Java",
+        "icon": "JavaIcon"
+      }
+   
+  ]
+  

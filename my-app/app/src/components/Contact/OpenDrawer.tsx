@@ -1,9 +1,5 @@
 "use client";
 
-/**
- * a prendre en exemple pour utilisation
- */
-
 import React from "react";
 import { ContactDrawer } from "./ContactDrawer";
 import { Button } from "../ui/button";
