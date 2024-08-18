@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { getRepos } from "@/app/src/domain/usecases/getRepos";
 import { getAllLanguages } from "@/app/src/domain/usecases/getAllLanguages";
 import { getTotalCommits } from "@/app/src/domain/usecases/getTotalCommits";
-import { updatedChartData, Component } from "./LanguagePieChart";
-import { Card } from "./ui/card";
+import { updatedChartData, LanguagePie } from "./LanguagePieChart";
+import { Card } from "../../ui/card";
 
 
 export const Language = () => {
@@ -62,7 +62,7 @@ export const Language = () => {
                </div>
             </Card>
          ) : (
-            <Component chartData={chartData} />
+            <LanguagePie chartData={chartData} />
          )}
       </div>
    );

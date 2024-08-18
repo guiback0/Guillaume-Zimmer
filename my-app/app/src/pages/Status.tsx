@@ -5,21 +5,27 @@ import works from "../../src/data/works.json";
 import socials from "../../src/data/socials.json";
 import { createContext, useContext, useState, useEffect } from "react";
 import { Card } from "../components/ui/card";
-import { Section } from "../components/Section";
+import { Section } from "../components/Shared/Section";
 import { SideProject } from "../components/Status/SideProject";
 import { RepositoryProps } from "@/app/src/domain/types/repository";
 import { Socials } from "../components/Status/Socials";
 import { transformRepositories } from "../utils/transformRepositories";
-import { Language } from "../components/Language";
-import { fetchRepositories } from "../domain/usecases/repositories";
+import { Language } from "../components/Status/LanguagePie/Language";
+import { getTop10ReposBySize } from "@/app/src/domain/usecases/getRepos";
+import { updatedChartData } from "../components/Status/LanguagePie/LanguagePieChart";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "../components/ui/button";
+import { GithubIcon } from "@/public/icons/GithubIcon";
 
 export const Status = () => {
    const [loading, setLoading] = useState(true);
+
    const [repositories, setRepositories] = useState<RepositoryProps[]>([]);
 
    useEffect(() => {
       const loadRepositories = async () => {
-         const data = await fetchRepositories("guiback0");
+         const data = await getTop10ReposBySize("guiback0");
          setRepositories(data);
          setLoading(false);
       };
@@ -73,14 +79,7 @@ export const Status = () => {
                      <Socials key={index} {...social} />
                   ))}
                </Card>
-
-               <div>
-                  {loading ? (
-                     <p>Loading...</p>
-                  ) : (
-                     <Component chartData={chartData} />
-                  )}
-               </div>
+               <Language />
             </div>
          </Section>
       );
@@ -96,6 +95,17 @@ export const Status = () => {
                      <SideProject key={index} {...project} />
                   ))}
                </div>
+               <Link
+                  href="https://github.com/guiback0?tab=repositories"
+                  className={cn(
+                     buttonVariants({ variant: "outline" }),
+                     "w-full p-0 gap-2"
+                  )}>
+                  <span className="text-sm text-muted-foreground">
+                     Voir plus sur GitHub
+                  </span>
+                  <GithubIcon size={16} className="text-foreground" />
+               </Link>
             </Card>
          </div>
 

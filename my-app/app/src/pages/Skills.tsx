@@ -1,5 +1,5 @@
 import { Badge } from "../components/ui/badge";
-import { Section } from "../components/Section";
+import { Section } from "../components/Shared/Section";
 import { SkillsCarousel } from "../components/Skills/Carousel";
 
 export const Skills = () => {

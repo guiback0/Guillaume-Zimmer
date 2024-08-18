@@ -10,7 +10,7 @@ import {
    CarouselNext,
    CarouselPrevious,
 } from "../ui/carousel";
-import { Section } from "../Section";
+import { Section } from "../Shared/Section";
 import skillsData from "../../data/skills.json";
 import { ICON_MAP } from "../../utils/skillIconsMap";
 

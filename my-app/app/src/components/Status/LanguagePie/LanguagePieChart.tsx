@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { TrendingUp } from "lucide-react";
+import Link from "next/link";
 import { Label, Pie, PieChart } from "recharts";
 
 import {
@@ -20,6 +20,9 @@ import {
    ChartTooltip,
    ChartTooltipContent,
 } from "@/components/ui/chart";
+import { cn } from "@/lib/utils";
+import { GithubIcon } from "@/public/icons/GithubIcon";
+import { buttonVariants } from "../../ui/button";
 
 export const updatedChartData = (allLanguages) => {
    return Object.keys(allLanguages).map((language) => ({
@@ -59,7 +62,7 @@ const chartConfig = {
    },
 } satisfies ChartConfig;
 
-export function Component({ chartData = [] }) {
+export function LanguagePie({ chartData = [] }) {
    const totalbytes = React.useMemo(() => {
       return chartData.reduce((acc, curr) => acc + curr.bytes, 0);
    }, [chartData]);
@@ -117,11 +120,20 @@ export function Component({ chartData = [] }) {
                </PieChart>
             </ChartContainer>
          </CardContent>
-         <CardFooter className="flex-col gap-2 text-sm">
-            <div className="flex items-center gap-2 font-medium leading-none">
-               Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-            </div>
-         </CardFooter>
+         <CardFooter className="flex-col gap-2 text-sm"></CardFooter>
+         <div className=" w-full p-4 pt-0 flex flex-col gap-2">
+            <Link
+               href="https://github.com/guiback0"
+               className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "w-full p-0 gap-2"
+               )}>
+               <span className="text-sm text-muted-foreground">
+                  Voir plus sur GitHub
+               </span>
+               <GithubIcon size={16} className="text-foreground" />
+            </Link>
+         </div>
       </Card>
    );
 }

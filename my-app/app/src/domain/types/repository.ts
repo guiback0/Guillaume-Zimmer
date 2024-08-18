@@ -3,4 +3,5 @@ export type RepositoryProps = {
     description: string;
     html_url: string;
     language: string;
+    size: number; // in KB
  };

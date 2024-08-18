@@ -1,4 +1,4 @@
-import { Section } from "../components/Section";
+import { Section } from "../components/Shared/Section";
 import { OpenDrawerButton } from "../components/Contact/OpenDrawer";
 import { Button } from "../components/ui/button";
 

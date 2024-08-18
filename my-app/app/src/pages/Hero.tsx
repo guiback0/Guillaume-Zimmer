@@ -1,7 +1,7 @@
-import { Section } from "../components/Section";
+import { Section } from "../components/Shared/Section";
 import Image from "next/image";
 import MyFace from "@/public/images/my-face.jpg";
-import { Code } from "../components/Code";
+import { Code } from "../components/Shared/Code";
 import { GithubIcon } from "../../../public/icons/GithubIcon";
 import Link from "next/link";
 import { Card } from "../components/ui/card";

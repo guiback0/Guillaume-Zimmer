@@ -1,5 +1,5 @@
 import { buttonVariants } from "../components/ui/button";
-import { Section } from "../components/Section";
+import { Section } from "../components/Shared/Section";
 import { GithubIcon } from "../../../public/icons/GithubIcon";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
