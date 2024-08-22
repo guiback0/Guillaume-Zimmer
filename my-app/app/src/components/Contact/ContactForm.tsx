@@ -28,6 +28,24 @@ const onSubmit = (data) => {
    // Handle form submission, e.g., send data to the server
 };
 
+export function ProfileForm() {
+   // 1. Define your form.
+   const form = useForm<z.infer<typeof formSchema>>({
+     resolver: zodResolver(formSchema),
+     defaultValues: {
+       email: "",
+     },
+   })
+
+     // 2. Define a submit handler.
+  function onSubmit(values: z.infer<typeof formSchema>) {
+   // Do something with the form values.
+   // ✅ This will be type-safe and validated.
+   console.log(values)
+ }
+}
+  
+
 export function ContactForm() {
    // ...
    const form = useForm();

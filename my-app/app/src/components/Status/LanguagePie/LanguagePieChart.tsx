@@ -23,6 +23,7 @@ import {
 import { cn } from "@/lib/utils";
 import { GithubIcon } from "@/public/icons/GithubIcon";
 import { buttonVariants } from "../../ui/button";
+import { GithubLink } from "../../Shared/GithubLink";
 
 export const updatedChartData = (allLanguages) => {
    return Object.keys(allLanguages).map((language) => ({
@@ -69,7 +70,7 @@ export function LanguagePie({ chartData = [] }) {
 
    return (
       <Card className="flex flex-col flex-1 ">
-         <p className="text-lg text-muted-foreground ml-4 mt-4">Github stats</p>
+         <p className="text-lg text-muted-foreground ml-4 mt-4">Github Stats</p>
          <CardContent className="flex-1 pb-0">
             <ChartContainer
                config={chartConfig}
@@ -98,7 +99,7 @@ export function LanguagePie({ chartData = [] }) {
                                     <tspan
                                        x={viewBox.cx}
                                        y={viewBox.cy}
-                                       className="text-xl fill-foreground text-3xl font-bold">
+                                       className="fill-foreground text-3xl font-bold">
                                        {totalbytes.toLocaleString()}
                                     </tspan>
                                     <tspan
@@ -122,17 +123,7 @@ export function LanguagePie({ chartData = [] }) {
          </CardContent>
          <CardFooter className="flex-col gap-2 text-sm"></CardFooter>
          <div className=" w-full p-4 pt-0 flex flex-col gap-2">
-            <Link
-               href="https://github.com/guiback0"
-               className={cn(
-                  buttonVariants({ variant: "outline" }),
-                  "w-full p-0 gap-2"
-               )}>
-               <span className="text-sm text-muted-foreground">
-                  Voir plus sur GitHub
-               </span>
-               <GithubIcon size={16} className="text-foreground" />
-            </Link>
+            <GithubLink/>
          </div>
       </Card>
    );

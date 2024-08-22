@@ -1,6 +1,6 @@
 export type WorkProps = {
-    image: string;
     title: string;
+    image: string;
     description: string;
     date: string;
     url: string;

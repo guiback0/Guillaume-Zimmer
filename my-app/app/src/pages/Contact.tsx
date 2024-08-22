@@ -1,5 +1,5 @@
 import { Section } from "../components/Shared/Section";
-import { OpenDrawerButton } from "../components/Contact/OpenDrawer";
+import { OpenDrawerButton } from "../components/Shared/OpenDrawer";
 import { Button } from "../components/ui/button";
 
 export const Contact = () => {

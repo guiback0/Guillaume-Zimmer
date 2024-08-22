@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import { useState, PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import { Button } from "../ui/button";
 import {
    Drawer,
@@ -12,7 +13,6 @@ import {
    DrawerTitle,
    DrawerTrigger,
 } from "../ui/drawer";
-
 import { ContactForm } from "../Contact/ContactForm";
 
 export const ContactDrawer = (props: PropsWithChildren<{}>) => {
@@ -32,7 +32,6 @@ export const ContactDrawer = (props: PropsWithChildren<{}>) => {
             <ContactForm />
             <DrawerFooter>
                <div className="flex justify-center">
-                  {" "}
                   <DrawerClose asChild>
                      <Button variant="outline">Cancel</Button>
                   </DrawerClose>

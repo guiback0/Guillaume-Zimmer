@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { Badge } from "../ui/badge";
 import Link from "next/link";
-import { WorkProps } from "../../domain/types/experience";
+import { WorkProps } from "../../domain/types/work";
 
 export const Work = (props: WorkProps) => {
    return (

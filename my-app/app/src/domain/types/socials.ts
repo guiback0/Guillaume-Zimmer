@@ -1,8 +1,8 @@
 export type SocialsProps = {
-   image: string;
    name: string;
+   image: string;
    mediumImage: string;
    description: string;
    wrapperType: 'link' | 'drawer';
-   href?: string; // Ajoutez cette prop si vous utilisez <Link>
+   href?: string; 
 };

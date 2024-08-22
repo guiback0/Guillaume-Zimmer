@@ -17,6 +17,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "../components/ui/button";
 import { GithubIcon } from "@/public/icons/GithubIcon";
+import { GithubLink } from "../components/Shared/GithubLink";
 
 export const Status = () => {
    const [loading, setLoading] = useState(true);
@@ -95,17 +96,7 @@ export const Status = () => {
                      <SideProject key={index} {...project} />
                   ))}
                </div>
-               <Link
-                  href="https://github.com/guiback0?tab=repositories"
-                  className={cn(
-                     buttonVariants({ variant: "outline" }),
-                     "w-full p-0 gap-2"
-                  )}>
-                  <span className="text-sm text-muted-foreground">
-                     Voir plus sur GitHub
-                  </span>
-                  <GithubIcon size={16} className="text-foreground" />
-               </Link>
+               <GithubLink/>
             </Card>
          </div>
 

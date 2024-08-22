@@ -1,16 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import { Card } from "../ui/card";
 import { ArrowUpRight } from "lucide-react";
-import { SocialsProps } from "../../domain/types/platform";
+import { SocialsProps } from "../../domain/types/socials";
 import Link from "next/link";
-import { OpenDrawerButton } from "../../components/Contact/OpenDrawer";
+import { OpenDrawerButton } from "../Shared/OpenDrawer";
 
 export const Socials = (props: SocialsProps) => {
-   const { wrapperType, ...rest } = props;
-
+   const { wrapperType,href, ...rest } = props;
    const Wrapper = wrapperType === "link" ? Link : OpenDrawerButton;
 
    return (
-      <Wrapper href={wrapperType === "link" ? rest.href : undefined}>
+      <Wrapper href={wrapperType === "link" && href ? href : "/"}>
          <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
             <div className="relative">
                <img
