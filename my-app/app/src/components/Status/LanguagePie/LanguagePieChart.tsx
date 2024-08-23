@@ -11,7 +11,7 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from "@/components/ui/card";
+} from "@/app/src/components/ui/card";
 import {
    ChartConfig,
    ChartContainer,
@@ -19,7 +19,7 @@ import {
    ChartLegendContent,
    ChartTooltip,
    ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "@/app/src/components/ui/chart";
 import { cn } from "@/lib/utils";
 import { GithubIcon } from "@/public/icons/GithubIcon";
 import { buttonVariants } from "../../ui/button";

@@ -3,7 +3,8 @@ import { Badge } from "../components/ui/badge";
 import { Section } from "../components/Shared/Section";
 import { SkillsCarousel } from "../components/Skills/Carousel";
 
-export const Skills = () => {
+export const Skills = ({skills}) => {
+   console.log(skills)
    return (
       <Section className="flex flex-col items-start gap-4">
          <Badge variant={"outline"} className="">
