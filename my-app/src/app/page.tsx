@@ -1,4 +1,3 @@
-
 import { Contact } from "../components/Status/Contact";
 /* import { Header } from "../components/Header"; */
 import { Hero } from "../components/Hero";
@@ -6,8 +5,7 @@ import { Skills } from "../components/Skills/Skills";
 import { Spacing } from "../components/Shared/Spacing";
 import { Status } from "../components/Status/Status";
 import { PrismaClient } from "@prisma/client";
-import { Toaster } from "../components/ui/toaster"
-
+import { Toaster } from "../components/ui/toaster";
 
 export default async function Home() {
    const prisma = new PrismaClient();

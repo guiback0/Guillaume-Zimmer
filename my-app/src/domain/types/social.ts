@@ -3,6 +3,6 @@ export type SocialProps = {
    image: string;
    mediumImage: string;
    description: string;
-   wrapperType: 'link' | 'drawer';
-   href?: string; 
+   wrapperType: string;
+   href?: string| null; 
 };
