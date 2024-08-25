@@ -1,19 +1,13 @@
+// LanguagePie.tsx
+
 "use client";
 
 import * as React from "react";
 import Link from "next/link";
 import { Label, Pie, PieChart } from "recharts";
 
+import { Card, CardContent, CardFooter } from "@/src/components/ui/card";
 import {
-   Card,
-   CardContent,
-   CardDescription,
-   CardFooter,
-   CardHeader,
-   CardTitle,
-} from "@/src/components/ui/card";
-import {
-   ChartConfig,
    ChartContainer,
    ChartLegend,
    ChartLegendContent,
@@ -21,46 +15,23 @@ import {
    ChartTooltipContent,
 } from "@/src/components/ui/chart";
 import { GithubLink } from "../../Shared/GithubLink";
+import { GithubStateProps } from "@/src/domain/types/githubState";
+import { LanguageProps } from "@/src/domain/types/language";
+import { chartConfig } from "../../../utils/chartConfig";
 
-export const updatedChartData = (allLanguages) => {
+export const updatedChartData = (allLanguages: LanguageProps) => {
    return Object.keys(allLanguages).map((language) => ({
-      language: language.toLowerCase(), // Convertir les noms de langages en minuscules pour correspondre aux noms de variables CSS
+      language: language.toLowerCase(),
       bytes: allLanguages[language],
-      fill: `var(--color-${language.toLowerCase()})`, // Assurez-vous que les variables CSS correspondent aux noms de langages en minuscules
+      fill: `var(--color-${language.toLowerCase()})`,
    }));
 };
 
-const chartConfig = {
-   bytes: {
-      label: "bytes",
-   },
-   html: {
-      label: "html",
-      color: "hsl(var(--chart-1))",
-   },
-   css: {
-      label: "css",
-      color: "hsl(var(--chart-2))",
-   },
-   typescript: {
-      label: "typescript",
-      color: "hsl(var(--chart-3))",
-   },
-   javascript: {
-      label: "javascript",
-      color: "hsl(var(--chart-4))",
-   },
-   java: {
-      label: "java",
-      color: "hsl(var(--chart-5))",
-   },
-   scss: {
-      label: "scss",
-      color: "hsl(var(--chart-6))",
-   },
-} satisfies ChartConfig;
-
-export function LanguagePie({ chartData = [] }) {
+export function LanguagePie({
+   chartData = [],
+}: {
+   chartData: GithubStateProps[];
+}) {
    const totalbytes = React.useMemo(() => {
       return chartData.reduce((acc, curr) => acc + curr.bytes, 0);
    }, [chartData]);

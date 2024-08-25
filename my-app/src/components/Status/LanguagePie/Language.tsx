@@ -7,16 +7,11 @@ import { getTotalCommits } from "@/src/domain/usecases/getTotalCommits";
 import { updatedChartData, LanguagePie } from "./LanguagePieChart";
 import { Card } from "../../ui/card";
 import { LoadingIndicator } from "../../Shared/LoadingIndicator";
-
-interface ChartData {
-   language: string;
-   bytes: number;
-   fill: string;
-}
+import { GithubStateProps } from "@/src/domain/types/githubState";
 
 export const Language = () => {
    const [loading, setLoading] = useState(true);
-   const [chartData, setChartData] = useState<ChartData[]>([]);
+   const [chartData, setChartData] = useState<GithubStateProps[]>([]); // Explicitly set the type
 
    useEffect(() => {
       const fetchData = async () => {
@@ -27,11 +22,9 @@ export const Language = () => {
          const allLanguages = await getAllLanguages(owner, repoNames);
          const commits = await getTotalCommits(owner, repoNames);
 
-         // Log the total bytes for each language to the console
          console.log("Total Bytes for Each Language:", allLanguages);
 
-         // Update chartData based on allLanguages
-         const newChartData = updatedChartData(allLanguages);
+         const newChartData = updatedChartData(allLanguages) as GithubStateProps[]; // Typecast if necessary
          setChartData(newChartData);
          setLoading(false);
       };
