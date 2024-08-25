@@ -10,14 +10,14 @@ import { OpenDrawerButton } from "./Shared/OpenDrawer";
 export const Hero = () => {
    return (
       <Section className="flex max-md:flex-col items-start gap-4">
-         <div className="flex flex-col flex-[3] w-full">
+         <div className="flex flex-col flex-[3] w-full h-full">
             <div className=" w-full p-4 flex flex-col gap-2">
                <div className="flex-[3] w-full flex flex-col gap-1">
-                  <h2 className="font-caption font-bold text-5xl text-primary">
+                  <h2 className="font-caption font-bold text-4xl text-primary">
                      Guillaume Zimmer
                   </h2>
                   <h3 className="font-caption text-2xl">
-                     Full Stack Developer
+                     Développeur Full Stack
                   </h3>
                   <p className="text-base">
                      Après avoir commencé dans la construction métallique et

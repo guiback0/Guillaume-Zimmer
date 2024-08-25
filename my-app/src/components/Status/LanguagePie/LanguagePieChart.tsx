@@ -3,7 +3,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { Label, Pie, PieChart } from "recharts";
 
 import { Card, CardContent, CardFooter } from "@/src/components/ui/card";

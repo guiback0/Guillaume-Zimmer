@@ -16,7 +16,7 @@ import { SkillsProps } from "../../domain/types/skill";
 
 export function SkillsCarousel({ skills }: { skills: SkillsProps[] }) {
    const plugin = React.useRef(
-      Autoplay({ delay: 1000, stopOnInteraction: false})
+      Autoplay({ delay: 2000, stopOnInteraction: false })
    );
 
    const renderIcon = (iconName: string) => {
