@@ -44,7 +44,7 @@ export const Status = ({
             <div className="flex-[3] w-full">
                <Card className="w-full p-4 flex flex-col gap-2">
                   <p className="text-lg text-muted-foreground">Side Project</p>
-                  <LoadingIndicator/>
+                  <LoadingIndicator />
                </Card>
             </div>
 
@@ -83,8 +83,8 @@ export const Status = ({
             </Card>
          </div>
 
-         <div className="flex-[2] flex flex-col gap-4">
-            <Card className="p-4 flex-1">
+         <div className="flex-[2] flex flex-col gap-4 w-full">
+            <Card className="p-4 flex-1 w-full">
                <p className="text-lg text-muted-foreground">Expériences</p>
                <div className="flex flex-col gap-4">
                   {works.map((work, index) => (
@@ -92,7 +92,7 @@ export const Status = ({
                   ))}
                </div>
             </Card>
-            <Card className="p-4 flex-[2] flex flex-col gap-2">
+            <Card className="p-4 flex-[2] flex flex-col gap-2 w-full">
                <p className="text-lg text-muted-foreground">Contactez-moi</p>
                {socials.map((social, index) => (
                   <Socials key={index} socials={social} />
