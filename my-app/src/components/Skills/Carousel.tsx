@@ -27,10 +27,10 @@ export function SkillsCarousel({ skills }: { skills: SkillsProps[] }) {
    };
 
    return (
-      <Section className="w-full md:p-10">
+      <Section className="max-sm:w-full overflow-hidden">
          <Carousel
             plugins={[plugin.current]}
-            className="w-full max-w-screen-lg"
+            className="w-full max-w-2xl"
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}>
             <CarouselContent>
@@ -38,7 +38,7 @@ export function SkillsCarousel({ skills }: { skills: SkillsProps[] }) {
                   <CarouselItem
                      key={index}
                      className="md:basis-1/3 lg:basis-1/3">
-                     <div className="p-1">
+                     <div>
                         <Card>
                            <CardContent className="flex aspect-square items-center justify-center p-6">
                               <div className="flex flex-col gap-4">

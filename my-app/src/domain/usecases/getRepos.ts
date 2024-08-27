@@ -34,3 +34,14 @@ export const getTop10ReposBySize = async (
    // Triez les dépôts par taille (size) et retournez les 10 premiers
    return repos.sort((a, b) => (b.size || 0) - (a.size || 0)).slice(0, 10);
 };
+
+export const getTop3ReposBySize = async (
+   owner: string
+): Promise<RepositoryProps[]> => {
+   // Utilisez la fonction getRepos pour obtenir les dépôts
+   const repos = await getRepos(owner);
+
+   // Triez les dépôts par taille (size) et retournez les 10 premiers
+   return repos.sort((a, b) => (b.size || 0) - (a.size || 0)).slice(0, 3);
+};
+
