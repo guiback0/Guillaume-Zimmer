@@ -2,11 +2,11 @@ import axios from "axios";
 import { RepositoryProps } from "@/src/domain/types/repository";
 
 export const getRepos = async (owner: string): Promise<RepositoryProps[]> => {
-   // Clé pour stocker les données dans localStorage
+   // Clé pour stocker les données dans sessionStorage
    const storageKey = `repos_${owner}`;
 
-   // Vérifiez si les données sont déjà présentes dans localStorage
-   const storedData = localStorage.getItem(storageKey);
+   // Vérifiez si les données sont déjà présentes dans sessionStorage
+   const storedData = sessionStorage.getItem(storageKey);
 
    if (storedData) {
       // Si les données sont présentes, retournez-les
@@ -17,8 +17,8 @@ export const getRepos = async (owner: string): Promise<RepositoryProps[]> => {
          `https://api.github.com/users/${owner}/repos`
       );
 
-      // Stockez les données dans localStorage
-      localStorage.setItem(storageKey, JSON.stringify(response.data));
+      // Stockez les données dans sessionStorage
+      sessionStorage.setItem(storageKey, JSON.stringify(response.data));
 
       // Retournez les données
       return response.data;
@@ -32,7 +32,7 @@ export const getTop10ReposBySize = async (
    const repos = await getRepos(owner);
 
    // Triez les dépôts par taille (size) et retournez les 10 premiers
-   return repos.sort((a, b) => (b.size || 0) - (a.size || 0)).slice(0, 10);
+   return repos.sort((a, b) => (b.size || 0) - (a.size || 0)).slice(0, 8);
 };
 
 export const getTop3ReposBySize = async (
@@ -44,4 +44,3 @@ export const getTop3ReposBySize = async (
    // Triez les dépôts par taille (size) et retournez les 10 premiers
    return repos.sort((a, b) => (b.size || 0) - (a.size || 0)).slice(0, 3);
 };
-

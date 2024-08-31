@@ -31,11 +31,11 @@ export const Hero = () => {
                      Développeur Full Stack
                   </h2>
                   <p className="text-base">
-                     Après avoir commencé dans la construction métallique et
-                     gestion de chantier la , je me consacre désormais avec
-                     passion au développement full stack. Je serais ravi de
-                     partager mon portfolio et de discuter de cette nouvelle
-                     étape de ma carrière.
+                     Après avoir commencé dans la construction métallique et la
+                     gestion de chantier, je me consacre désormais avec passion
+                     au développement full stack. Je serais ravi de partager mon
+                     portfolio et de discuter de cette nouvelle étape de ma
+                     carrière.
                      {/* <Link href="https://github.com/guiback0">
                             <Code className="inline-flex items-center gap-1">
                                 <GithubIcon
