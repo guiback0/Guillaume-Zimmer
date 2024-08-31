@@ -48,34 +48,36 @@ export const Status = ({
    if (loading) {
       return (
          <Section className="flex max-md:flex-col items-start gap-4">
-         <div className="flex-[3] w-full">
-            <Card className="w-full p-4 flex flex-col gap-2">
-               <p className="text-lg text-muted-foreground">Side Project</p>
-               <div className="flex flex-col gap-4">
-                  <LoadingIndicator/>
-               </div>
-               <GithubLink />
-            </Card>
-         </div>
+            <div className="flex-[3] w-full">
+               <Card className="w-full p-4 flex flex-col gap-2">
+                  <h3 className="text-lg text-muted-foreground">Projets</h3>
+                  <div className="flex flex-col gap-4">
+                     <LoadingIndicator />
+                  </div>
+                  <GithubLink />
+               </Card>
+            </div>
 
-         <div className="flex-[2] flex flex-col gap-4 w-full">
-            <Card className="p-4 flex-1 w-full">
-               <p className="text-lg text-muted-foreground">Expériences</p>
-               <div className="flex flex-col gap-4">
-                  {works.map((work, index) => (
-                     <Work key={index} works={work} />
+            <div className="flex-[2] flex flex-col gap-4 w-full">
+               <Card className="p-4 flex-1 w-full">
+                  <h3 className="text-lg text-muted-foreground">Expériences</h3>
+                  <div className="flex flex-col gap-4">
+                     {works.map((work, index) => (
+                        <Work key={index} works={work} />
+                     ))}
+                  </div>
+               </Card>
+               <Card className="p-4 flex-[2] flex flex-col gap-2 w-full">
+                  <h3 className="text-lg text-muted-foreground">
+                     Contactez-moi
+                  </h3>
+                  {socials.map((social, index) => (
+                     <Socials key={index} socials={social} />
                   ))}
-               </div>
-            </Card>
-            <Card className="p-4 flex-[2] flex flex-col gap-2 w-full">
-               <p className="text-lg text-muted-foreground">Contactez-moi</p>
-               {socials.map((social, index) => (
-                  <Socials key={index} socials={social} />
-               ))}
-            </Card>
-            <Language />
-         </div>
-      </Section>
+               </Card>
+               <Language />
+            </div>
+         </Section>
       );
    }
 
@@ -83,7 +85,7 @@ export const Status = ({
       <Section className="flex max-md:flex-col items-start gap-4">
          <div className="flex-[3] w-full">
             <Card className="w-full p-4 flex flex-col gap-2">
-               <p className="text-lg text-muted-foreground">Side Project</p>
+               <h3 className="text-lg text-muted-foreground">Projet</h3>
                <div className="flex flex-col gap-4">
                   {sideProjects.map((project, index) => (
                      <SideProject key={index} {...project} />
@@ -95,7 +97,7 @@ export const Status = ({
 
          <div className="flex-[2] flex flex-col gap-4 w-full">
             <Card className="p-4 flex-1 w-full">
-               <p className="text-lg text-muted-foreground">Expériences</p>
+               <h3 className="text-lg text-muted-foreground">Expériences</h3>
                <div className="flex flex-col gap-4">
                   {works.map((work, index) => (
                      <Work key={index} works={work} />
@@ -103,7 +105,7 @@ export const Status = ({
                </div>
             </Card>
             <Card className="p-4 flex-[2] flex flex-col gap-2 w-full">
-               <p className="text-lg text-muted-foreground">Contactez-moi</p>
+               <h3 className="text-lg text-muted-foreground">Contactez-moi</h3>
                {socials.map((social, index) => (
                   <Socials key={index} socials={social} />
                ))}

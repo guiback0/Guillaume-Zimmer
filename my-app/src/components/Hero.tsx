@@ -11,9 +11,9 @@ export const Hero = () => {
          <div className="flex flex-col md:flex-row flex-[3] w-full h-full">
             <div className="mr-4 flex-[3] w-full md:w-2/3 flex flex-col gap-2 order-1">
                <div className="flex justify-between items-center">
-                  <h2 className="font-caption font-bold text-5xl text-primary">
+                  <h1 className="font-caption font-bold text-5xl text-primary">
                      Guillaume Zimmer
-                  </h2>
+                  </h1>
                   <div className="md:hidden">
                      <Avatar>
                         <Image
@@ -27,9 +27,9 @@ export const Hero = () => {
                </div>
 
                <div className="w-full mt-4 flex flex-col gap-2">
-                  <h3 className="font-caption text-2xl">
+                  <h2 className="font-caption text-2xl">
                      Développeur Full Stack
-                  </h3>
+                  </h2>
                   <p className="text-base">
                      Après avoir commencé dans la construction métallique et
                      gestion de chantier la , je me consacre désormais avec

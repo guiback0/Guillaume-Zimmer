@@ -11,9 +11,9 @@ const AnekTelugu = Anek_Telugu({
 });
 
 export const metadata: Metadata = {
-   title: "Guillaume Zimmer - Full Stack Developer",
+   title: "Guillaume Zimmer - Développeur Full Stack",
    description:
-      "Full Stack Developer Portfolio - Comprehensive showcase of expertise in end-to-end web development. Discover a wide array of projects demonstrating mastery in HTML, CSS, JavaScript, Java, and more. Gain insight into experience with React, Angular, Node.js, Django, Ruby on Rails, and other frameworks. Explore completed projects, each with detailed descriptions, showcasing the ability to solve complex problems and implement effective solutions. Witness proficiency in working with APIs, managing servers, and understanding version control systems like Git. This portfolio reflects a Full Stack Developer's adaptability, dedication to continuous learning, and commitment to delivering high-quality, innovative web solutions.",
+      "Découvrez le portfolio de Guillaume, développeur full stack spécialisé en HTML, CSS, JavaScript, TypeScript, React, Node.js, Next.js et Java. Explorez mes projets et compétences pour des solutions web innovantes et performantes.",
 };
 
 export default function RootLayout({

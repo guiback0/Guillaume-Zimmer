@@ -10,9 +10,9 @@ export const Skills = ({ skills }: { skills: SkillsProps[] }) => {
          <Badge variant={"outline"} className="">
             Skills
          </Badge>
-         <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-            I'm working on ...
-         </h2>
+         <h3 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+            Je travail sur ...
+         </h3>
          <SkillsCarousel skills={skills} />
       </Section>
    );
